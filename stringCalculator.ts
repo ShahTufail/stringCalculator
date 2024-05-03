@@ -1,5 +1,6 @@
 export class StringCalculator {
     // implemented in ts but can be replicated in any stacj
+    // used less complex and tdd approach to write simple functions/methods within StringCalculator class 
     
   add(numbers: string): number {
     if (!numbers) {
@@ -20,6 +21,7 @@ export class StringCalculator {
     return customDelimiterMatch ? customDelimiterMatch[1].split('') : [',', '\n'];
   }
 
+// this method has void return as an exception is expected to be thrown here on getting a negative number
   private checkForNegatives(numbers: string[]): void {
     const negativeNumbers = numbers.filter(num => parseInt(num) < 0);
     if (negativeNumbers.length > 0) {
