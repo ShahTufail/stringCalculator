@@ -11,3 +11,7 @@ it('should return the single number', () => {
   const calculator = new StringCalculator();
   expect(calculator.add('1')).toBe(1);
 });
+it('should add multiple numbers separated by comma', () => {
+  const calculator = new StringCalculator();
+  expect(calculator.add('1,2')).toBe(3);
+});
