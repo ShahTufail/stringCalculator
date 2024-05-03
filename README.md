@@ -8,8 +8,8 @@
 
 
 # Explore my GitHub, LinkedIn and Website here
-
-My LinkedIn Profile: [Profile](https://www.linkedin.com/in/tufail-shah619/) *
-Explore my GitHub here: [GitHub](https://github.com/ShahTufail) *
-Dev profile: [Dev](https://dev.to/tufail) *
-Portfolio: [Here](https://tufail.tech/) *
+<br />
+My LinkedIn Profile: [Profile](https://www.linkedin.com/in/tufail-shah619/) <br />
+Explore my GitHub here: [GitHub](https://github.com/ShahTufail) <br />
+Dev profile: [Dev](https://dev.to/tufail) <br />
+Portfolio: [Here](https://tufail.tech/) <br />
