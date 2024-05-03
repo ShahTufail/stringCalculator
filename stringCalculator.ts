@@ -1,8 +1,6 @@
-import { StringCalculator } from './stringCalculator';
-
-describe('StringCalculator', () => {
-  it('should return 0 for an empty string', () => {
-    const calculator = new StringCalculator();
-    expect(calculator.add('')).toBe(0);
-  });
-});
+export class StringCalculator {
+  add(numbers: string): number {
+    return parseInt(numbers);
+  }
+}
+  
