@@ -38,5 +38,10 @@ describe('StringCalculator', () => {
     const calculator = new StringCalculator();
     expect(calculator.add('9007199254740991')).toBe(9007199254740991); // Max safe integer in JS
   });
+  
+  it('should ignore numbers after exceeding max safe integer', () => {
+    const calculator = new StringCalculator();
+    expect(calculator.add('1,9007199254740991,2')).toBe(9007199254740993); // Ignores the last number
+  });
 
 });
