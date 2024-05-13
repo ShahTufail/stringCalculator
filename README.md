@@ -7,9 +7,7 @@
 # Youtube reference : [watch](https://www.youtube.com/watch?v=qkblc5WRn-U)
 
 
-** 
-List of Test Cases Covered in String Calculator:
-**
+** List of Test Cases Covered in String Calculator: **
 
 Basic Functionality:
 
