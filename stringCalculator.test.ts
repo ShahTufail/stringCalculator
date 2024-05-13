@@ -44,4 +44,9 @@ describe('StringCalculator', () => {
     expect(calculator.add('1,9007199254740991,2')).toBe(9007199254740993); // Ignores the last number
   });
 
+  t('should throw an exception for empty string after custom delimiters definition', () => {
+    const calculator = new StringCalculator();
+    expect(() => calculator.add('//;')).toThrowError('Numbers are required');
+  });
+
 });
