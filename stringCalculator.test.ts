@@ -33,5 +33,10 @@ describe('StringCalculator', () => {
     const calculator = new StringCalculator();
     expect(() => calculator.add('-1')).toThrowError('Negative numbers not allowed: -1');
   });
+  
+  it('should handle numbers larger than max safe integer', () => {
+    const calculator = new StringCalculator();
+    expect(calculator.add('9007199254740991')).toBe(9007199254740991); // Max safe integer in JS
+  });
 
 });
