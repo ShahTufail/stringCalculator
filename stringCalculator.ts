@@ -1,7 +1,6 @@
 export class StringCalculator {
-    // implemented in ts but can be replicated in any stacj
-    // used less complex and tdd approach to write simple functions/methods within StringCalculator class 
-    
+  private readonly MAX_SAFE_INTEGER = 9007199254740991;
+
   add(numbers: string): number {
     if (!numbers) {
       return 0;
@@ -12,16 +11,20 @@ export class StringCalculator {
 
     this.checkForNegatives(numbersArray);
 
-    return numbersArray.reduce((sum, current) => sum + parseInt(current), 0);
+    return numbersArray.reduce((sum, current) => {
+      const num = parseInt(current);
+      if (num > this.MAX_SAFE_INTEGER) {
+        return sum; // Ignore numbers exceeding max safe integer
+      }
+      return sum + num;
+    }, 0);
   }
 
-  // writing private functions here to get delimeters and negative checking  
   private getDelimiters(numbers: string): string[] {
     const customDelimiterMatch = numbers.match(/\/\/(.*)\n/);
     return customDelimiterMatch ? customDelimiterMatch[1].split('') : [',', '\n'];
   }
 
-// this method has void return as an exception is expected to be thrown here on getting a negative number
   private checkForNegatives(numbers: string[]): void {
     const negativeNumbers = numbers.filter(num => parseInt(num) < 0);
     if (negativeNumbers.length > 0) {
