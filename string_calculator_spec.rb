@@ -13,4 +13,14 @@ require_relative 'string_calculator'
     calculator = StringCalculator.new
     expect(calculator.add('')).to eq(0)
   end
+# test cases on delimiter and single digit
+  it 'returns the single number' do
+    calculator = StringCalculator.new
+    expect(calculator.add('1')).to eq(1)
+  end
+
+  it 'adds multiple numbers separated by comma' do
+    calculator = StringCalculator.new
+    expect(calculator.add('1,2')).to eq(3)
+  end
  end
