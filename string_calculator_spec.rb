@@ -23,4 +23,13 @@ require_relative 'string_calculator'
     calculator = StringCalculator.new
     expect(calculator.add('1,2')).to eq(3)
   end
+    it 'adds multiple numbers separated by newlines' do
+    calculator = StringCalculator.new
+    expect(calculator.add('1\n2')).to eq(3)
+  end
+
+  it 'supports custom delimiters' do
+    calculator = StringCalculator.new
+    expect(calculator.add('//;\n1;2')).to eq(3)
+  end
  end
